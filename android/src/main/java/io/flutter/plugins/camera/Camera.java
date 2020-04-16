@@ -533,7 +533,7 @@ public class Camera {
   }
 
   private void calculateZoom(float step) {
-    zoomLevel += step;
+    zoomLevel = step;
 
     if (zoomLevel < 1f) {
       zoomLevel = 1f;
