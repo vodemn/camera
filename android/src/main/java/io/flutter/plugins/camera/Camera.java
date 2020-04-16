@@ -522,8 +522,8 @@ public class Camera {
     orientationEventListener.disable();
   }
 
-  public void zoom(float step) throws CameraAccessException {
-    changeZoom(step);
+  public void zoom(double step) throws CameraAccessException {
+    changeZoom((float) step);
   }
 
   private void changeZoom(float step) throws CameraAccessException {
