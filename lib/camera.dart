@@ -594,7 +594,7 @@ class CameraController extends ValueNotifier<CameraValue> {
   /// change zoom by specific [step].
   /// with a negative step, the zoom will be 1
   ///
-  Future<void> zoom(int step) async {
+  Future<void> zoom(double step) async {
     await _channel.invokeMethod<void>('zoom', <String, dynamic>{'step': step});
   }
 
