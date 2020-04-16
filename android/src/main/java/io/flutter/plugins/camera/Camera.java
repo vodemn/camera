@@ -522,17 +522,17 @@ public class Camera {
     orientationEventListener.disable();
   }
 
-  public void zoom(int step) throws CameraAccessException {
+  public void zoom(float step) throws CameraAccessException {
     changeZoom(step);
   }
 
-  private void changeZoom(int step) throws CameraAccessException {
+  private void changeZoom(float step) throws CameraAccessException {
     calculateZoom(step);
     setScalerCropRegion(captureRequestBuilder, zoom);
     cameraCaptureSession.setRepeatingRequest(captureRequestBuilder.build(), null, null);
   }
 
-  private void calculateZoom(int step) {
+  private void calculateZoom(float step) {
     zoomLevel += step;
 
     if (zoomLevel < 1f) {
